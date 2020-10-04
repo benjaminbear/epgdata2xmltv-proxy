@@ -21,7 +21,7 @@ script:
   - tar zcf epgdata2xmltv-proxy_osx_x64.tar.gz osx_x64/epgdata2xmltv-proxy epgdata_includes
   - GOOS=windows GOARCH=386 go build -ldflags "-s -w -X main.Version=$TAG" -o win_x86/epgdata2xmltv-proxy.exe
   - tar zcf epgdata2xmltv-proxy_win_x86.tar.gz win_x86/epgdata2xmltv-proxy.exe epgdata_includes
-  - GOOS=linux GOARCH=386 go build -ldflags "-s -w -X main.Version=$TAG" -o epgdata2xmltv-proxy
+  - GOOS=linux GOARCH=386 go build -ldflags "-s -w -X main.Version=$TAG" -o linux_x86/epgdata2xmltv-proxy
   - tar zcf epgdata2xmltv-proxy_linux_x86.tar.gz linux_x86/epgdata2xmltv-proxy epgdata_includes
 
 notifications:
@@ -40,6 +40,5 @@ deploy:
     - "epgdata2xmltv-proxy_osx_x64.tar.gz"
     - "epgdata2xmltv-proxy_win_x86.tar.gz"
     - "epgdata2xmltv-proxy_linux_x86.tar.gz"
-    - "epgdata2xmltv-proxy_osx_x86.tar.gz"
   on:
     tags: true
