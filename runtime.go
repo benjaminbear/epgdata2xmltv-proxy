@@ -78,12 +78,15 @@ func (r *RunTime) DayRotation(timeToday *today.Today) error {
 		if epgDay.Date == timeToday.String() {
 			r.EPGDays = r.EPGDays[i:]
 
-			for j := i; j < r.Config.Days; j++ {
+			for j := 0; j < i; j++ {
 				r.EPGDays = append(r.EPGDays, &epgdata.Pack{})
 			}
 
 			return nil
 		}
+
+		// if epgDay.Date != today empty it
+		r.EPGDays[i].Date = ""
 	}
 
 	// today not found
