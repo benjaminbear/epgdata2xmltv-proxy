@@ -248,5 +248,14 @@ func (r *RunTime) XMLTvServer(w http.ResponseWriter, req *http.Request) {
 	}
 
 	http.ServeFile(w, req, "latest.xml")
-	fmt.Println("Request from: ", req.RemoteAddr)
+
+	IPAddress := req.Header.Get("X-Real-Ip")
+	if IPAddress == "" {
+		IPAddress = req.Header.Get("X-Forwarded-For")
+	}
+	if IPAddress == "" {
+		IPAddress = req.RemoteAddr
+	}
+
+	fmt.Println("Request from: ", IPAddress)
 }
