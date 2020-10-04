@@ -1,13 +1,13 @@
 FROM golang:latest as builder
 
-ARG DOCKER_TAG=${DOCKER_TAG}
-
 ENV GO111MODULE=on
 ENV GOPATH=/root/go
 RUN mkdir -p /root/go/src/epgdate2xmltv-proxy
 COPY . /root/go/src/epgdate2xmltv-proxy/
 
-RUN cd /root/go/src/epgdate2xmltv-proxy && go mod download && GOOS=linux GOARCH=amd64 go build -ldflags "-s -w -X main.Version=$DOCKER_TAG" -o /root/go/bin/epgdate2xmltv-proxy
+RUN TAG=$(curl --silent "https://api.github.com/repos/benjaminbear/epgdata2xmltv-proxy/releases/latest" | grep -Po '"tag_name": "\K.*?(?=")') \
+    && cd /root/go/src/epgdate2xmltv-proxy && go mod download \
+    && GOOS=linux GOARCH=amd64 go build -ldflags "-s -w -X main.Version=${TAG}" -o /root/go/bin/epgdate2xmltv-proxy
 
 FROM alpine:latest
 
