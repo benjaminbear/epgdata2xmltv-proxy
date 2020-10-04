@@ -13,7 +13,11 @@ import (
 	"github.com/benjaminbear/epgdata2xmltv-proxy/epgdata"
 )
 
+var Version = "undefined"
+
 func main() {
+	fmt.Println("Version:", Version)
+
 	// Parse config from environment
 	conf, err := config.ParseEnv()
 	if err != nil {
@@ -61,7 +65,7 @@ func main() {
 	c.Start()
 
 	// Run Server
-	http.HandleFunc("/", runtime.XMLTvServer)
+	http.HandleFunc("/epg", runtime.XMLTvServer)
 	err = http.ListenAndServe(":8080", nil)
 	if err != nil {
 		log.Fatal(err)
