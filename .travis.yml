@@ -18,7 +18,6 @@ script:
   - GOOS=darwin GOARCH=amd64 go build -ldflags "-s -w -X main.Version=$TAG" -o epgdata2xmltv_proxy_osx_x64
   - GOOS=windows GOARCH=386 go build -ldflags "-s -w -X main.Version=$TAG" -o epgdata2xmltv_proxy_win_x86.exe
   - GOOS=linux GOARCH=386 go build -ldflags "-s -w -X main.Version=$TAG" -o epgdata2xmltv_proxy_linux_x86
-  - GOOS=darwin GOARCH=386 go build -ldflags "-s -w -X main.Version=$TAG" -o epgdata2xmltv_proxy_osx_x86
 
 notifications:
   email:
