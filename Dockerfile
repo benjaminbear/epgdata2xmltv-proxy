@@ -1,5 +1,7 @@
 FROM golang:latest as builder
 
+ARG DOCKER_TAG=${DOCKER_TAG}
+
 ENV GO111MODULE=on
 ENV GOPATH=/root/go
 RUN mkdir -p /root/go/src/epgdate2xmltv-proxy
