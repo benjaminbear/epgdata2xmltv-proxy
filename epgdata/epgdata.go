@@ -103,7 +103,7 @@ func UnmarshalEPGData(data []byte, v interface{}) error {
 	return xml.Unmarshal(data, v)
 }
 
-func ReadEPGDataFile(path string) (*Pack, error) {
+func ReadEPGDataFile(path string, crawler bool) (*Pack, error) {
 	data, err := ioutil.ReadFile(path)
 	if err != nil {
 		return nil, err
@@ -114,6 +114,10 @@ func ReadEPGDataFile(path string) (*Pack, error) {
 	err = UnmarshalEPGData(data, epgData)
 	if err != nil {
 		return nil, err
+	}
+
+	if !crawler {
+		return epgData, nil
 	}
 
 	sem := make(chan int, 10)
