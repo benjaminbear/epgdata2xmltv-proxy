@@ -3,6 +3,7 @@ package epgdata
 import (
 	"encoding/xml"
 	"io/ioutil"
+	"path/filepath"
 )
 
 type Channels struct {
@@ -48,8 +49,8 @@ func UnmarshalChannels(data []byte, v interface{}) error {
 	return xml.Unmarshal(data, v)
 }
 
-func ReadChannelsFile(path string) (channels *Channels, channelMap map[string]string, err error) {
-	data, err := ioutil.ReadFile(path)
+func ReadChannelsFile() (channels *Channels, channelMap map[string]string, err error) {
+	data, err := ioutil.ReadFile(filepath.Join(folderEPGInclude, fileEPGIncludeChannels))
 	if err != nil {
 		return nil, nil, err
 	}

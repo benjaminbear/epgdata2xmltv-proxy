@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	"path/filepath"
 
 	"github.com/benjaminbear/epgdata2xmltv-proxy/config"
 
@@ -30,23 +29,29 @@ func main() {
 
 	runtime.initEPGDays()
 
+	_, runtime.GenreMap, err = epgdata.ReadGenresFile()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	_, runtime.CategoryMap, err = epgdata.ReadCategoriesFile()
+	if err != nil {
+		log.Fatal(err)
+	}
+
 	var channels *epgdata.Channels
-	_, runtime.GenreMap, err = epgdata.ReadGenresFile(filepath.Join("epgdata_includes", "genre.xml"))
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	_, runtime.CategoryMap, err = epgdata.ReadCategoriesFile(filepath.Join("epgdata_includes", "category.xml"))
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	channels, runtime.ChannelMap, err = epgdata.ReadChannelsFile(filepath.Join("epgdata_includes", "channel_y.xml"))
+	channels, runtime.ChannelMap, err = epgdata.ReadChannelsFile()
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	runtime.ParseChannels(channels)
+
+	// Load persistence if there
+	err = epgdata.Load(runtime.EPGDays)
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	// Start cron once
 	err = runtime.EPGCron()
@@ -56,7 +61,7 @@ func main() {
 
 	// Add cron process
 	c := cron.New(cron.WithLocation(runtime.Config.TimeZone))
-	c.AddFunc("42 3 * * *", func() {
+	c.AddFunc("12 6 * * *", func() {
 		err := runtime.EPGCron()
 		if err != nil {
 			fmt.Println(err)
@@ -66,6 +71,8 @@ func main() {
 
 	// Run Server
 	http.HandleFunc("/epg", runtime.XMLTvServer)
+	fmt.Println("Webserver ready.")
+
 	err = http.ListenAndServe(":8080", nil)
 	if err != nil {
 		log.Fatal(err)

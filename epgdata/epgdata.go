@@ -1,9 +1,28 @@
 package epgdata
 
 import (
+	"bufio"
+	"bytes"
+	"encoding/json"
 	"encoding/xml"
 	"fmt"
+	"io"
 	"io/ioutil"
+	"os"
+	"path/filepath"
+)
+
+const (
+	folderPersistence        = "persistence"
+	filePersistence          = "epgdata.bin"
+	folderEPGInclude         = "epgdata_includes"
+	fileEPGIncludeGenres     = "genre.xml"
+	fileEPGIncludeCategories = "category.xml"
+	fileEPGIncludeChannels   = "channel_y.xml"
+)
+
+var (
+	pathPersistence = filepath.Join(folderPersistence, filePersistence)
 )
 
 type Pack struct {
@@ -80,17 +99,6 @@ func NewEPGData() *Pack {
 	return epgData
 }
 
-func MarshalEPGData(v interface{}) ([]byte, error) {
-	data, err := xml.MarshalIndent(v, "", "  ")
-	if err != nil {
-		return data, err
-	}
-
-	data = append([]byte(xml.Header), data...)
-
-	return data, err
-}
-
 func UnmarshalEPGData(data []byte, v interface{}) error {
 	return xml.Unmarshal(data, v)
 }
@@ -130,6 +138,51 @@ func ReadEPGDataFile(path string) (*Pack, error) {
 	return epgData, nil
 }
 
-func WriteEPGDataFile(path string, data []byte) error {
-	return ioutil.WriteFile(path, data, 0644)
+func Save(data interface{}) (err error) {
+	if _, err = os.Stat(pathPersistence); !os.IsNotExist(err) {
+		err = os.Remove(pathPersistence)
+		if err != nil {
+			return err
+		}
+	}
+
+	if _, err = os.Stat(folderPersistence); os.IsNotExist(err) {
+		err = os.MkdirAll(folderPersistence, os.ModePerm)
+		if err != nil {
+			return err
+		}
+	}
+
+	f, err := os.Create(pathPersistence)
+	if err != nil {
+		return err
+	}
+	defer f.Close()
+
+	b, err := json.MarshalIndent(data, "", "\t")
+	if err != nil {
+		return err
+	}
+
+	_, err = io.Copy(f, bytes.NewReader(b))
+
+	return err
+}
+
+func Load(packs []*Pack) (err error) {
+	if _, err = os.Stat(pathPersistence); os.IsNotExist(err) {
+		return nil
+	}
+
+	fmt.Println("Loading persistent data from disk")
+
+	f, err := os.Open(pathPersistence)
+	if err != nil {
+		return err
+	}
+	defer f.Close()
+
+	err = json.NewDecoder(bufio.NewReader(f)).Decode(&packs)
+
+	return err
 }

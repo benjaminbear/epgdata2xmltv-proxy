@@ -15,7 +15,10 @@ import (
 	"github.com/saracen/fastzip"
 )
 
-const EGPURL = "http://www.epgdata.com/index.php"
+const (
+	epgURL        = "http://www.epgdata.com/index.php"
+	FolderEPGData = "epgdata_files"
+)
 
 type epgDownloader struct {
 	pin       string
@@ -43,7 +46,7 @@ func DownloadEPG(pin string, timeToday *today.Today, days int) error {
 	defer os.RemoveAll(dir)
 
 	for i := 0; i < e.days; i++ {
-		matches, err := filepath.Glob(filepath.Join("epgdata_files", timeToday.GetDayPlus(i)+"_*_de_qy.xml"))
+		matches, err := filepath.Glob(filepath.Join(FolderEPGData, timeToday.GetDayPlus(i)+"_*_de_qy.xml"))
 		if err != nil {
 			return err
 		}
@@ -60,7 +63,7 @@ func DownloadEPG(pin string, timeToday *today.Today, days int) error {
 
 		fmt.Printf("Successfully downloaded epg for day %s\n", timeToday.GetDayPlus(i))
 
-		e, err := fastzip.NewExtractor(filepath.Join(dir, fmt.Sprintf("%d.zip", i)), "epgdata_files")
+		e, err := fastzip.NewExtractor(filepath.Join(dir, fmt.Sprintf("%d.zip", i)), FolderEPGData)
 		if err != nil {
 			return err
 		}
@@ -77,7 +80,7 @@ func DownloadEPG(pin string, timeToday *today.Today, days int) error {
 }
 
 func (e *epgDownloader) downloadFile(dayPlus int, tempDir string) error {
-	req, err := http.NewRequest(http.MethodGet, EGPURL, nil)
+	req, err := http.NewRequest(http.MethodGet, epgURL, nil)
 	if err != nil {
 		return err
 	}
@@ -122,7 +125,7 @@ func (e *epgDownloader) downloadFile(dayPlus int, tempDir string) error {
 }
 
 func (e *epgDownloader) removeDeprecated() error {
-	matches, err := filepath.Glob(filepath.Join("epgdata_files", "*_*_de_qy.xml"))
+	matches, err := filepath.Glob(filepath.Join(FolderEPGData, "*_*_de_qy.xml"))
 	if err != nil {
 		return err
 	}

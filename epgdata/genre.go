@@ -3,6 +3,7 @@ package epgdata
 import (
 	"encoding/xml"
 	"io/ioutil"
+	"path/filepath"
 )
 
 type Genres struct {
@@ -37,8 +38,8 @@ func UnmarshalGenres(data []byte, v interface{}) error {
 	return xml.Unmarshal(data, v)
 }
 
-func ReadGenresFile(path string) (genres *Genres, genreMap map[string]string, err error) {
-	data, err := ioutil.ReadFile(path)
+func ReadGenresFile() (genres *Genres, genreMap map[string]string, err error) {
+	data, err := ioutil.ReadFile(filepath.Join(folderEPGInclude, fileEPGIncludeGenres))
 	if err != nil {
 		return nil, nil, err
 	}

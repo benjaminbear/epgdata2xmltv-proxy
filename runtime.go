@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"net/http"
 	"path/filepath"
+	"time"
 
 	"github.com/benjaminbear/epgdata2xmltv-proxy/config"
 	"github.com/benjaminbear/epgdata2xmltv-proxy/epgdata"
@@ -49,7 +50,7 @@ func (r *RunTime) EPGCron() error {
 	// parse newly downloaded days
 	for i, epgDay := range r.EPGDays {
 		if epgDay.Date == "" {
-			matches, err := filepath.Glob(filepath.Join("epgdata_files", timeToday.GetDayPlus(i)+"_*_de_qy.xml"))
+			matches, err := filepath.Glob(filepath.Join(epgdownload.FolderEPGData, timeToday.GetDayPlus(i)+"_*_de_qy.xml"))
 			if err != nil {
 				return err
 			}
@@ -67,7 +68,15 @@ func (r *RunTime) EPGCron() error {
 		}
 	}
 
-	fmt.Println("finished!")
+	// Wait once to get data finished
+	time.Sleep(2 * time.Second)
+
+	err = epgdata.Save(r.EPGDays)
+	if err != nil {
+		return err
+	}
+
+	fmt.Println("Finished cron!")
 
 	return nil
 }
@@ -75,7 +84,7 @@ func (r *RunTime) EPGCron() error {
 func (r *RunTime) DayRotation(timeToday *today.Today) error {
 	for i, epgDay := range r.EPGDays {
 		// today found, make rotation
-		if epgDay.Date == timeToday.String() {
+		if epgDay.Date == timeToday.GetString() {
 			r.EPGDays = r.EPGDays[i:]
 
 			for j := 0; j < i; j++ {
