@@ -11,6 +11,7 @@ type Config struct {
 	Pin      string
 	Days     int
 	TimeZone *time.Location
+	Crawler  bool
 }
 
 func ParseEnv() (conf *Config, err error) {
@@ -36,6 +37,16 @@ func ParseEnv() (conf *Config, err error) {
 		conf.TimeZone = time.Now().Local().Location()
 	} else {
 		conf.TimeZone, err = time.LoadLocation(tz)
+		if err != nil {
+			return conf, err
+		}
+	}
+
+	crw := os.Getenv("EPG2XMLTV_CRAWLER")
+	if crw == "" {
+		conf.Crawler = true
+	} else {
+		conf.Crawler, err = strconv.ParseBool(crw)
 		if err != nil {
 			return conf, err
 		}
