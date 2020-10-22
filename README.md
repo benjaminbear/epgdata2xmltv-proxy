@@ -12,6 +12,8 @@ This docker service grabs **epgdata** from a source (hoerzu), adds further infor
 
 ## Usage
 
+### Docker image
+
 Pull repository
 
 ```bash
@@ -25,6 +27,16 @@ Run container:
 docker run -p 8080:8080 bbaerthlein/epgdata2xmltv-proxy
 ```
 
+### Binary
+
+Download and extract the binary for your os and architecture from the [release page](https://github.com/benjaminbear/epgdata2xmltv-proxy/releases/).
+
+Start the binary: (example for linux)
+
+```bash
+EPG2XMLTV_EPGDATA_PIN=1234 ./epgdata2xmltv-proxy_linux_x64
+```
+
 ## Environment variables
 
 ```
@@ -34,7 +46,7 @@ EPG2XMLTV_TIMEZONE: (optional) Set your timezone for correct airtime: e.g. "Euro
 EPG2XMLTV_CRAWLER: (optional) Enable/disable webcrawler (much faster on start)
 ```
 
-## Mount directories
+## Mount directories (docker)
 
 If you want persist downloaded epgdata files add:
 
