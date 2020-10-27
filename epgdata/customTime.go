@@ -18,13 +18,13 @@ func (t *dateTime) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 		return err
 	}
 
-	parse, err := time.Parse(shortForm, v)
+	parse, err := time.ParseInLocation(shortForm, v, timeZone)
 	if err != nil {
 		return err
 	}
 
 	// correct missing time zone
-	*t = dateTime{parse.Add(time.Hour * -2)}
+	*t = dateTime{parse}
 
 	return nil
 }

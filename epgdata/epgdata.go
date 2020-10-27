@@ -10,6 +10,7 @@ import (
 	"io/ioutil"
 	"os"
 	"path/filepath"
+	"time"
 )
 
 const (
@@ -23,6 +24,7 @@ const (
 
 var (
 	pathPersistence = filepath.Join(folderPersistence, filePersistence)
+	timeZone        *time.Location
 )
 
 type Pack struct {
@@ -103,7 +105,9 @@ func UnmarshalEPGData(data []byte, v interface{}) error {
 	return xml.Unmarshal(data, v)
 }
 
-func ReadEPGDataFile(path string, crawler bool) (*Pack, error) {
+func ReadEPGDataFile(path string, crawler bool, tz *time.Location) (*Pack, error) {
+	timeZone = tz
+
 	data, err := ioutil.ReadFile(path)
 	if err != nil {
 		return nil, err

@@ -59,7 +59,7 @@ func (r *RunTime) EPGCron() error {
 				return fmt.Errorf("epgfile for date %s not found", timeToday.GetDayPlus(i))
 			}
 
-			r.EPGDays[i], err = epgdata.ReadEPGDataFile(matches[0], r.Config.Crawler)
+			r.EPGDays[i], err = epgdata.ReadEPGDataFile(matches[0], r.Config.Crawler, r.Config.TimeZone)
 			if err != nil {
 				return err
 			}
