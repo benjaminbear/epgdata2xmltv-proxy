@@ -42,7 +42,14 @@ func (r *RunTime) EPGCron() error {
 	}
 
 	// download days
-	err = epgdownload.DownloadEPG(r.Config.Pin, timeToday, r.Config.Days)
+	epgDownloader := &epgdownload.EPGDownloader{
+		Pin:         r.Config.Pin,
+		TimeToday:   timeToday,
+		Days:        r.Config.Days,
+		InsecureTLS: r.Config.Insecure,
+	}
+
+	err = epgDownloader.DownloadEPG()
 	if err != nil {
 		return err
 	}

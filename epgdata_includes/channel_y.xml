@@ -116,51 +116,6 @@
 
 <channel>
 	<data>
-        <ch0>Sixx</ch0>
-        <ch1>SIXX</ch1>
-        <ch2>ger</ch2>
-        <ch3>de</ch3>
-        <ch4>694</ch4>
-        <ch5>0</ch5>
-        <ch6>1033</ch6>
-        <ch7></ch7>
-        <ch8></ch8>
-        <ch9>0</ch9>
-        <ch10>0</ch10>
-        <ch11>Sixx</ch11>
-        <ch12>0</ch12>
-    </data>
-	<data>
-        <ch0>ProSieben Fun</ch0>
-        <ch1>P7FUN</ch1>
-        <ch2>ger</ch2>
-        <ch3>de</ch3>
-        <ch4>765</ch4>
-        <ch5>0</ch5>
-        <ch6>1033</ch6>
-        <ch7></ch7>
-        <ch8></ch8>
-        <ch9>0</ch9>
-        <ch10>0</ch10>
-        <ch11>ProSieben Fun</ch11>
-        <ch12>0</ch12>
-    </data>
-	<data>
-        <ch0>ProSieben Fun HD</ch0>
-        <ch1>P7FHD</ch1>
-        <ch2>ger</ch2>
-        <ch3>de</ch3>
-        <ch4>10099</ch4>
-        <ch5>0</ch5>
-        <ch6>1033</ch6>
-        <ch7></ch7>
-        <ch8></ch8>
-        <ch9>0</ch9>
-        <ch10>0</ch10>
-        <ch11>ProSieben Fun HD</ch11>
-        <ch12>0</ch12>
-    </data>
-	<data>
         <ch0>Das Erste</ch0>
         <ch1>ERSTE</ch1>
         <ch2>ger</ch2>
@@ -716,7 +671,7 @@
         <ch12>0</ch12>
     </data>
 	<data>
-        <ch0>HSE24</ch0>
+        <ch0>HSE</ch0>
         <ch1>HSE24</ch1>
         <ch2>ger</ch2>
         <ch3>de</ch3>
@@ -1106,7 +1061,7 @@
         <ch12>0</ch12>
     </data>
 	<data>
-        <ch0>Discovery HD</ch0>
+        <ch0>Discovery Channel HD</ch0>
         <ch1>DHD</ch1>
         <ch2>ger</ch2>
         <ch3>de</ch3>
@@ -1136,18 +1091,18 @@
         <ch12>0</ch12>
     </data>
 	<data>
-        <ch0>Planet</ch0>
-        <ch1>PLANE</ch1>
+        <ch0>Bergblick</ch0>
+        <ch1>DBBK</ch1>
         <ch2>ger</ch2>
         <ch3>de</ch3>
-        <ch4>195</ch4>
+        <ch4>12149</ch4>
         <ch5>66</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
         <ch9>0</ch9>
         <ch10>0</ch10>
-        <ch11>Planet</ch11>
+        <ch11>DBBK</ch11>
         <ch12>0</ch12>
     </data>
 	<data>
@@ -1241,7 +1196,7 @@
         <ch12>0</ch12>
     </data>
 	<data>
-        <ch0>VH1 Classic</ch0>
+        <ch0>MTV 80s</ch0>
         <ch1>VH1CLA</ch1>
         <ch2>eng</ch2>
         <ch3>en</ch3>
@@ -1298,21 +1253,6 @@
         <ch9>0</ch9>
         <ch10>0</ch10>
         <ch11>Italia 1</ch11>
-        <ch12>0</ch12>
-    </data>
-	<data>
-        <ch0>Schweiz 5</ch0>
-        <ch1>CH5</ch1>
-        <ch2>ger</ch2>
-        <ch3>de</ch3>
-        <ch4>299</ch4>
-        <ch5>77</ch5>
-        <ch6>1033</ch6>
-        <ch7></ch7>
-        <ch8></ch8>
-        <ch9>0</ch9>
-        <ch10>0</ch10>
-        <ch11>Schweiz 5</ch11>
         <ch12>0</ch12>
     </data>
 	<data>
@@ -1466,27 +1406,12 @@
         <ch12>0</ch12>
     </data>
 	<data>
-        <ch0>Disney Junior</ch0>
-        <ch1>DISJN</ch1>
-        <ch2>ger</ch2>
-        <ch3>de</ch3>
-        <ch4>460</ch4>
-        <ch5>88</ch5>
-        <ch6>1033</ch6>
-        <ch7></ch7>
-        <ch8></ch8>
-        <ch9>0</ch9>
-        <ch10>0</ch10>
-        <ch11>Disney Junior</ch11>
-        <ch12>0</ch12>
-    </data>
-	<data>
         <ch0>MTV Hits UK</ch0>
         <ch1>MTVHI</ch1>
         <ch2>eng</ch2>
         <ch3>en</ch3>
         <ch4>466</ch4>
-        <ch5>89</ch5>
+        <ch5>88</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -1501,7 +1426,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>468</ch4>
-        <ch5>90</ch5>
+        <ch5>89</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -1516,7 +1441,7 @@
         <ch2>eng</ch2>
         <ch3>en</ch3>
         <ch4>469</ch4>
-        <ch5>91</ch5>
+        <ch5>90</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -1531,7 +1456,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>471</ch4>
-        <ch5>92</ch5>
+        <ch5>91</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -1546,7 +1471,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>472</ch4>
-        <ch5>93</ch5>
+        <ch5>92</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -1561,7 +1486,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>756</ch4>
-        <ch5>94</ch5>
+        <ch5>93</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -1576,7 +1501,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>625</ch4>
-        <ch5>95</ch5>
+        <ch5>94</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -1591,7 +1516,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>487</ch4>
-        <ch5>96</ch5>
+        <ch5>95</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -1606,7 +1531,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>766</ch4>
-        <ch5>97</ch5>
+        <ch5>96</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -1621,7 +1546,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>10100</ch4>
-        <ch5>98</ch5>
+        <ch5>97</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -1636,7 +1561,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>492</ch4>
-        <ch5>99</ch5>
+        <ch5>98</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -1651,7 +1576,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>507</ch4>
-        <ch5>100</ch5>
+        <ch5>99</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -1666,7 +1591,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>527</ch4>
-        <ch5>101</ch5>
+        <ch5>100</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -1681,7 +1606,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>528</ch4>
-        <ch5>102</ch5>
+        <ch5>101</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -1696,7 +1621,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>763</ch4>
-        <ch5>103</ch5>
+        <ch5>102</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -1711,7 +1636,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>529</ch4>
-        <ch5>104</ch5>
+        <ch5>103</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -1726,7 +1651,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>537</ch4>
-        <ch5>105</ch5>
+        <ch5>104</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -1741,7 +1666,7 @@
         <ch2>eng</ch2>
         <ch3>en</ch3>
         <ch4>538</ch4>
-        <ch5>106</ch5>
+        <ch5>105</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -1756,7 +1681,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>544</ch4>
-        <ch5>107</ch5>
+        <ch5>106</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -1771,7 +1696,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>564</ch4>
-        <ch5>108</ch5>
+        <ch5>107</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -1781,27 +1706,12 @@
         <ch12>0</ch12>
     </data>
 	<data>
-        <ch0>FOX</ch0>
-        <ch1>FOX</ch1>
-        <ch2>ger</ch2>
-        <ch3>de</ch3>
-        <ch4>565</ch4>
-        <ch5>109</ch5>
-        <ch6>1033</ch6>
-        <ch7></ch7>
-        <ch8></ch8>
-        <ch9>0</ch9>
-        <ch10>0</ch10>
-        <ch11>FOX</ch11>
-        <ch12>0</ch12>
-    </data>
-	<data>
-        <ch0>TNT Serie</ch0>
+        <ch0>Warner TV Serie</ch0>
         <ch1>TNTSE</ch1>
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>590</ch4>
-        <ch5>110</ch5>
+        <ch5>108</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -1816,7 +1726,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>610</ch4>
-        <ch5>111</ch5>
+        <ch5>109</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -1826,12 +1736,12 @@
         <ch12>0</ch12>
     </data>
 	<data>
-        <ch0>Sky Cinema Premieren HD</ch0>
+        <ch0>Sky Cinema Premieren</ch0>
         <ch1>SKYCINHD</ch1>
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>629</ch4>
-        <ch5>112</ch5>
+        <ch5>110</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -1846,7 +1756,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>612</ch4>
-        <ch5>113</ch5>
+        <ch5>111</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -1861,7 +1771,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>613</ch4>
-        <ch5>114</ch5>
+        <ch5>112</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -1876,7 +1786,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>617</ch4>
-        <ch5>115</ch5>
+        <ch5>113</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -1886,12 +1796,12 @@
         <ch12>0</ch12>
     </data>
 	<data>
-        <ch0>Sky Cinema Thriller HD</ch0>
+        <ch0>Sky Cinema Thriller</ch0>
         <ch1>SKYCT</ch1>
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>12132</ch4>
-        <ch5>116</ch5>
+        <ch5>114</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -1906,7 +1816,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>618</ch4>
-        <ch5>117</ch5>
+        <ch5>115</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -1916,12 +1826,12 @@
         <ch12>0</ch12>
     </data>
 	<data>
-        <ch0>Sky Cinema Best Of HD</ch0>
+        <ch0>Sky Cinema Best Of</ch0>
         <ch1>SKHHD</ch1>
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>10059</ch4>
-        <ch5>118</ch5>
+        <ch5>116</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -1936,7 +1846,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>614</ch4>
-        <ch5>119</ch5>
+        <ch5>117</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -1946,11 +1856,41 @@
         <ch12>0</ch12>
     </data>
 	<data>
-        <ch0>Sky Cinema Family HD</ch0>
+        <ch0>Sky Cinema Family</ch0>
         <ch1>skyfam</ch1>
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>12042</ch4>
+        <ch5>118</ch5>
+        <ch6>1033</ch6>
+        <ch7></ch7>
+        <ch8></ch8>
+        <ch9>0</ch9>
+        <ch10>0</ch10>
+        <ch11></ch11>
+        <ch12>0</ch12>
+    </data>
+	<data>
+        <ch0>Sky Cinema Special</ch0>
+        <ch1>SKYCS</ch1>
+        <ch2>ger</ch2>
+        <ch3>de</ch3>
+        <ch4>12121</ch4>
+        <ch5>119</ch5>
+        <ch6>1033</ch6>
+        <ch7></ch7>
+        <ch8></ch8>
+        <ch9>0</ch9>
+        <ch10>0</ch10>
+        <ch11>SKYCS</ch11>
+        <ch12>0</ch12>
+    </data>
+	<data>
+        <ch0>Sky Comedy</ch0>
+        <ch1>SKYCO</ch1>
+        <ch2>ger</ch2>
+        <ch3>de</ch3>
+        <ch4>595</ch4>
         <ch5>120</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
@@ -1961,22 +1901,22 @@
         <ch12>0</ch12>
     </data>
 	<data>
-        <ch0>Sky Cinema Special HD</ch0>
-        <ch1>SKYCS</ch1>
+        <ch0>Sky Crime</ch0>
+        <ch1>SKYCR</ch1>
         <ch2>ger</ch2>
         <ch3>de</ch3>
-        <ch4>12121</ch4>
+        <ch4>603</ch4>
         <ch5>121</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
         <ch9>0</ch9>
         <ch10>0</ch10>
-        <ch11>SKYCS</ch11>
+        <ch11>SKYCR</ch11>
         <ch12>0</ch12>
     </data>
 	<data>
-        <ch0>Sky Atlantic HD</ch0>
+        <ch0>Sky Atlantic</ch0>
         <ch1>SATHD</ch1>
         <ch2>ger</ch2>
         <ch3>de</ch3>
@@ -2051,7 +1991,7 @@
         <ch12>0</ch12>
     </data>
 	<data>
-        <ch0>Sky Sport 1 HD</ch0>
+        <ch0>Sky Sport 1</ch0>
         <ch1>SKSHD</ch1>
         <ch2>ger</ch2>
         <ch3>de</ch3>
@@ -2066,7 +2006,7 @@
         <ch12>0</ch12>
     </data>
 	<data>
-        <ch0>Sky Sport 2 HD</ch0>
+        <ch0>Sky Sport 2</ch0>
         <ch1>SSHD2</ch1>
         <ch2>ger</ch2>
         <ch3>de</ch3>
@@ -2081,27 +2021,12 @@
         <ch12>0</ch12>
     </data>
 	<data>
-        <ch0>Sky Sport Austria 1</ch0>
-        <ch1>SKYSPORA</ch1>
-        <ch2>ger</ch2>
-        <ch3>de</ch3>
-        <ch4>622</ch4>
-        <ch5>129</ch5>
-        <ch6>1033</ch6>
-        <ch7></ch7>
-        <ch8></ch8>
-        <ch9>0</ch9>
-        <ch10>0</ch10>
-        <ch11>Sky Sport Austria</ch11>
-        <ch12>0</ch12>
-    </data>
-	<data>
         <ch0>Sky Sport Bundesliga 1</ch0>
         <ch1>SKYBULI</ch1>
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>623</ch4>
-        <ch5>130</ch5>
+        <ch5>129</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -2111,12 +2036,72 @@
         <ch12>0</ch12>
     </data>
 	<data>
+        <ch0>Sky Sport F1</ch0>
+        <ch1>SKYF1</ch1>
+        <ch2>ger</ch2>
+        <ch3>de</ch3>
+        <ch4>561</ch4>
+        <ch5>130</ch5>
+        <ch6>1033</ch6>
+        <ch7></ch7>
+        <ch8></ch8>
+        <ch9>0</ch9>
+        <ch10>0</ch10>
+        <ch11>SKYF1</ch11>
+        <ch12>0</ch12>
+    </data>
+	<data>
+        <ch0>Sky Sport Austria 1</ch0>
+        <ch1>SKYSPORA</ch1>
+        <ch2>ger</ch2>
+        <ch3>de</ch3>
+        <ch4>622</ch4>
+        <ch5>131</ch5>
+        <ch6>1033</ch6>
+        <ch7></ch7>
+        <ch8></ch8>
+        <ch9>0</ch9>
+        <ch10>0</ch10>
+        <ch11>Sky Sport Austria</ch11>
+        <ch12>0</ch12>
+    </data>
+	<data>
+        <ch0>Sky Documentaries</ch0>
+        <ch1>SKYD</ch1>
+        <ch2>ger</ch2>
+        <ch3>de</ch3>
+        <ch4>12148</ch4>
+        <ch5>132</ch5>
+        <ch6>1033</ch6>
+        <ch7></ch7>
+        <ch8></ch8>
+        <ch9>0</ch9>
+        <ch10>0</ch10>
+        <ch11>SKYD</ch11>
+        <ch12>0</ch12>
+    </data>
+	<data>
+        <ch0>Sky Nature</ch0>
+        <ch1>SKYN</ch1>
+        <ch2>ger</ch2>
+        <ch3>de</ch3>
+        <ch4>12147</ch4>
+        <ch5>133</ch5>
+        <ch6>1033</ch6>
+        <ch7></ch7>
+        <ch8></ch8>
+        <ch9>0</ch9>
+        <ch10>0</ch10>
+        <ch11>SKYN</ch11>
+        <ch12>0</ch12>
+    </data>
+	<data>
         <ch0>National Geographic HD</ch0>
         <ch1>NGHD</ch1>
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>624</ch4>
-        <ch5>131</ch5>
+        <ch5>134</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -2131,7 +2116,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>626</ch4>
-        <ch5>132</ch5>
+        <ch5>135</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -2146,7 +2131,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>627</ch4>
-        <ch5>133</ch5>
+        <ch5>136</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -2156,27 +2141,12 @@
         <ch12>0</ch12>
     </data>
 	<data>
-        <ch0>Sky Select</ch0>
-        <ch1>SKYSE</ch1>
-        <ch2>ger</ch2>
-        <ch3>de</ch3>
-        <ch4>628</ch4>
-        <ch5>134</ch5>
-        <ch6>1033</ch6>
-        <ch7></ch7>
-        <ch8></ch8>
-        <ch9>0</ch9>
-        <ch10>0</ch10>
-        <ch11>Sky Select</ch11>
-        <ch12>0</ch12>
-    </data>
-	<data>
-        <ch0>TNT Film</ch0>
+        <ch0>Warner TV Film</ch0>
         <ch1>TNTFM</ch1>
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>633</ch4>
-        <ch5>135</ch5>
+        <ch5>137</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -2191,7 +2161,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>634</ch4>
-        <ch5>136</ch5>
+        <ch5>138</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -2206,7 +2176,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>659</ch4>
-        <ch5>137</ch5>
+        <ch5>139</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -2221,7 +2191,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>660</ch4>
-        <ch5>138</ch5>
+        <ch5>140</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -2236,7 +2206,7 @@
         <ch2>ita</ch2>
         <ch3>it</ch3>
         <ch4>255</ch4>
-        <ch5>139</ch5>
+        <ch5>141</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -2251,7 +2221,7 @@
         <ch2>ita</ch2>
         <ch3>it</ch3>
         <ch4>256</ch4>
-        <ch5>140</ch5>
+        <ch5>142</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -2266,7 +2236,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>232</ch4>
-        <ch5>141</ch5>
+        <ch5>143</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -2278,10 +2248,10 @@
 	<data>
         <ch0>Tele Bielingue</ch0>
         <ch1>TBIEL</ch1>
-        <ch2>und</ch2>
+        <ch2>mul</ch2>
         <ch3>xx</ch3>
         <ch4>248</ch4>
-        <ch5>142</ch5>
+        <ch5>144</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -2296,7 +2266,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>247</ch4>
-        <ch5>143</ch5>
+        <ch5>145</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -2311,7 +2281,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>250</ch4>
-        <ch5>144</ch5>
+        <ch5>146</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -2321,12 +2291,12 @@
         <ch12>0</ch12>
     </data>
 	<data>
-        <ch0>Sky Cinema Action HD</ch0>
+        <ch0>Sky Cinema Action</ch0>
         <ch1>SACHD</ch1>
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>10058</ch4>
-        <ch5>145</ch5>
+        <ch5>147</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -2341,7 +2311,7 @@
         <ch2>eng</ch2>
         <ch3>en</ch3>
         <ch4>601</ch4>
-        <ch5>146</ch5>
+        <ch5>148</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -2356,7 +2326,7 @@
         <ch2>fre</ch2>
         <ch3>fr</ch3>
         <ch4>258</ch4>
-        <ch5>147</ch5>
+        <ch5>149</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -2366,12 +2336,12 @@
         <ch12>0</ch12>
     </data>
 	<data>
-        <ch0>MTV Brand New</ch0>
+        <ch0>MTV Hits</ch0>
         <ch1>MTVBN</ch1>
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>738</ch4>
-        <ch5>148</ch5>
+        <ch5>150</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -2386,7 +2356,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>762</ch4>
-        <ch5>149</ch5>
+        <ch5>151</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -2401,7 +2371,7 @@
         <ch2>fre</ch2>
         <ch3>fr</ch3>
         <ch4>257</ch4>
-        <ch5>150</ch5>
+        <ch5>152</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -2416,7 +2386,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>552</ch4>
-        <ch5>151</ch5>
+        <ch5>153</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -2431,7 +2401,7 @@
         <ch2>tur</ch2>
         <ch3>tr</ch3>
         <ch4>254</ch4>
-        <ch5>152</ch5>
+        <ch5>154</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -2446,7 +2416,7 @@
         <ch2>eng</ch2>
         <ch3>en</ch3>
         <ch4>127</ch4>
-        <ch5>153</ch5>
+        <ch5>155</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -2461,7 +2431,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>402</ch4>
-        <ch5>154</ch5>
+        <ch5>156</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -2476,7 +2446,7 @@
         <ch2>fre</ch2>
         <ch3>fr</ch3>
         <ch4>574</ch4>
-        <ch5>155</ch5>
+        <ch5>157</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -2491,7 +2461,7 @@
         <ch2>fre</ch2>
         <ch3>fr</ch3>
         <ch4>547</ch4>
-        <ch5>156</ch5>
+        <ch5>158</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -2506,7 +2476,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>774</ch4>
-        <ch5>157</ch5>
+        <ch5>159</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -2521,7 +2491,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>783</ch4>
-        <ch5>158</ch5>
+        <ch5>160</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -2536,7 +2506,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>10139</ch4>
-        <ch5>159</ch5>
+        <ch5>161</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -2551,7 +2521,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>139</ch4>
-        <ch5>160</ch5>
+        <ch5>162</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -2566,7 +2536,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>136058</ch4>
-        <ch5>161</ch5>
+        <ch5>163</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -2581,7 +2551,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>485</ch4>
-        <ch5>162</ch5>
+        <ch5>164</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -2596,7 +2566,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>532</ch4>
-        <ch5>163</ch5>
+        <ch5>165</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -2611,36 +2581,6 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>666</ch4>
-        <ch5>164</ch5>
-        <ch6>1033</ch6>
-        <ch7></ch7>
-        <ch8></ch8>
-        <ch9>0</ch9>
-        <ch10>0</ch10>
-        <ch11></ch11>
-        <ch12>0</ch12>
-    </data>
-	<data>
-        <ch0>TNT Comedy</ch0>
-        <ch1>tntcom</ch1>
-        <ch2>ger</ch2>
-        <ch3>de</ch3>
-        <ch4>12035</ch4>
-        <ch5>165</ch5>
-        <ch6>1033</ch6>
-        <ch7></ch7>
-        <ch8></ch8>
-        <ch9>0</ch9>
-        <ch10>0</ch10>
-        <ch11></ch11>
-        <ch12>0</ch12>
-    </data>
-	<data>
-        <ch0>TNT Comedy HD</ch0>
-        <ch1>tntnchd</ch1>
-        <ch2>ger</ch2>
-        <ch3>de</ch3>
-        <ch4>12036</ch4>
         <ch5>166</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
@@ -2651,12 +2591,42 @@
         <ch12>0</ch12>
     </data>
 	<data>
-        <ch0>RTL Plus</ch0>
+        <ch0>Warner TV Comedy</ch0>
+        <ch1>tntcom</ch1>
+        <ch2>ger</ch2>
+        <ch3>de</ch3>
+        <ch4>12035</ch4>
+        <ch5>167</ch5>
+        <ch6>1033</ch6>
+        <ch7></ch7>
+        <ch8></ch8>
+        <ch9>0</ch9>
+        <ch10>0</ch10>
+        <ch11></ch11>
+        <ch12>0</ch12>
+    </data>
+	<data>
+        <ch0>Warner TV Comedy HD</ch0>
+        <ch1>tntnchd</ch1>
+        <ch2>ger</ch2>
+        <ch3>de</ch3>
+        <ch4>12036</ch4>
+        <ch5>168</ch5>
+        <ch6>1033</ch6>
+        <ch7></ch7>
+        <ch8></ch8>
+        <ch9>0</ch9>
+        <ch10>0</ch10>
+        <ch11></ch11>
+        <ch12>0</ch12>
+    </data>
+	<data>
+        <ch0>RTLup</ch0>
         <ch1>RTLPL</ch1>
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>12033</ch4>
-        <ch5>167</ch5>
+        <ch5>169</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -2671,7 +2641,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>136012</ch4>
-        <ch5>168</ch5>
+        <ch5>170</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -2686,7 +2656,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>12102</ch4>
-        <ch5>169</ch5>
+        <ch5>171</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -2701,7 +2671,7 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>12125</ch4>
-        <ch5>170</ch5>
+        <ch5>172</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
@@ -2716,13 +2686,58 @@
         <ch2>ger</ch2>
         <ch3>de</ch3>
         <ch4>12052</ch4>
-        <ch5>171</ch5>
+        <ch5>173</ch5>
         <ch6>1033</ch6>
         <ch7></ch7>
         <ch8></ch8>
         <ch9>0</ch9>
         <ch10>0</ch10>
         <ch11>SR Fernsehen</ch11>
+        <ch12>0</ch12>
+    </data>
+	<data>
+        <ch0>Bild</ch0>
+        <ch1>BILD</ch1>
+        <ch2>ger</ch2>
+        <ch3>de</ch3>
+        <ch4>12146</ch4>
+        <ch5>174</ch5>
+        <ch6>1033</ch6>
+        <ch7></ch7>
+        <ch8></ch8>
+        <ch9>0</ch9>
+        <ch10>0</ch10>
+        <ch11>BILD</ch11>
+        <ch12>0</ch12>
+    </data>
+	<data>
+        <ch0>ProSieben Fun</ch0>
+        <ch1>P7FUN</ch1>
+        <ch2>ger</ch2>
+        <ch3>de</ch3>
+        <ch4>765</ch4>
+        <ch5>175</ch5>
+        <ch6>1033</ch6>
+        <ch7></ch7>
+        <ch8></ch8>
+        <ch9>0</ch9>
+        <ch10>0</ch10>
+        <ch11>ProSieben Fun</ch11>
+        <ch12>0</ch12>
+    </data>
+	<data>
+        <ch0>sixx</ch0>
+        <ch1>SIXX</ch1>
+        <ch2>ger</ch2>
+        <ch3>de</ch3>
+        <ch4>694</ch4>
+        <ch5>176</ch5>
+        <ch6>1033</ch6>
+        <ch7></ch7>
+        <ch8></ch8>
+        <ch9>0</ch9>
+        <ch10>0</ch10>
+        <ch11>sixx</ch11>
         <ch12>0</ch12>
     </data>
 </channel>

@@ -44,6 +44,7 @@ EPG2XMLTV_EPGDATA_PIN: (mandatory) Your epgdata pin, mandatory
 EPG2XMLTV_DAYS: (optional) Count of days to download from your epg source and serve: 1-7
 EPG2XMLTV_TIMEZONE: (optional) Set your timezone for correct airtime: e.g. "Europe/Berlin"
 EPG2XMLTV_CRAWLER: (optional) Enable/disable webcrawler (much faster on start)
+EPG2XMLTV_INSECURE: (optional) Allow insecure http/s requests
 ```
 
 ## Mount directories (docker)

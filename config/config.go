@@ -12,6 +12,7 @@ type Config struct {
 	Days     int
 	TimeZone *time.Location
 	Crawler  bool
+	Insecure bool
 }
 
 func ParseEnv() (conf *Config, err error) {
@@ -47,6 +48,16 @@ func ParseEnv() (conf *Config, err error) {
 		conf.Crawler = true
 	} else {
 		conf.Crawler, err = strconv.ParseBool(crw)
+		if err != nil {
+			return conf, err
+		}
+	}
+
+	ica := os.Getenv("EPG2XMLTV_INSECURE")
+	if ica == "" {
+		conf.Insecure = true
+	} else {
+		conf.Insecure, err = strconv.ParseBool(ica)
 		if err != nil {
 			return conf, err
 		}

@@ -1,6 +1,8 @@
 package epgdownload
 
 import (
+	"context"
+	"crypto/tls"
 	"fmt"
 	"io"
 	"io/ioutil"
@@ -20,19 +22,14 @@ const (
 	FolderEPGData = "epgdata_files"
 )
 
-type epgDownloader struct {
-	pin       string
-	timeToday *today.Today
-	days      int
+type EPGDownloader struct {
+	Pin         string
+	TimeToday   *today.Today
+	Days        int
+	InsecureTLS bool
 }
 
-func DownloadEPG(pin string, timeToday *today.Today, days int) error {
-	e := epgDownloader{
-		pin:       pin,
-		timeToday: timeToday,
-		days:      days,
-	}
-
+func (e *EPGDownloader) DownloadEPG() error {
 	err := e.removeDeprecated()
 	if err != nil {
 		return err
@@ -45,14 +42,14 @@ func DownloadEPG(pin string, timeToday *today.Today, days int) error {
 
 	defer os.RemoveAll(dir)
 
-	for i := 0; i < e.days; i++ {
-		matches, err := filepath.Glob(filepath.Join(FolderEPGData, timeToday.GetDayPlus(i)+"_*_de_qy.xml"))
+	for i := 0; i < e.Days; i++ {
+		matches, err := filepath.Glob(filepath.Join(FolderEPGData, e.TimeToday.GetDayPlus(i)+"_*_de_qy.xml"))
 		if err != nil {
 			return err
 		}
 
 		if len(matches) > 0 {
-			fmt.Println("EPG File", timeToday.GetDayPlus(i), "already downloaded, skipping download")
+			fmt.Println("EPG File", e.TimeToday.GetDayPlus(i), "already downloaded, skipping download")
 			continue
 		}
 
@@ -61,25 +58,25 @@ func DownloadEPG(pin string, timeToday *today.Today, days int) error {
 			return err
 		}
 
-		fmt.Printf("Successfully downloaded epg for day %s\n", timeToday.GetDayPlus(i))
+		fmt.Printf("Successfully downloaded epg for day %s\n", e.TimeToday.GetDayPlus(i))
 
-		e, err := fastzip.NewExtractor(filepath.Join(dir, fmt.Sprintf("%d.zip", i)), FolderEPGData)
+		ext, err := fastzip.NewExtractor(filepath.Join(dir, fmt.Sprintf("%d.zip", i)), FolderEPGData)
 		if err != nil {
 			return err
 		}
-		defer e.Close()
+		defer ext.Close()
 
-		if err = e.Extract(); err != nil {
+		if err = ext.Extract(context.Background()); err != nil {
 			return err
 		}
 
-		fmt.Printf("Successfully extracted epg for day %s\n", timeToday.GetDayPlus(i))
+		fmt.Printf("Successfully extracted epg for day %s\n", e.TimeToday.GetDayPlus(i))
 	}
 
 	return nil
 }
 
-func (e *epgDownloader) downloadFile(dayPlus int, tempDir string) error {
+func (e *EPGDownloader) downloadFile(dayPlus int, tempDir string) error {
 	req, err := http.NewRequest(http.MethodGet, epgURL, nil)
 	if err != nil {
 		return err
@@ -89,7 +86,7 @@ func (e *epgDownloader) downloadFile(dayPlus int, tempDir string) error {
 	q.Add("action", "sendPackage")
 	q.Add("iOEM", "vdr")
 	q.Add("dayOffset", fmt.Sprintf("%d", dayPlus))
-	q.Add("pin", e.pin)
+	q.Add("pin", e.Pin)
 	q.Add("dataType", "xml")
 	req.URL.RawQuery = q.Encode()
 
@@ -97,7 +94,14 @@ func (e *epgDownloader) downloadFile(dayPlus int, tempDir string) error {
 	req.Header.Add("Cache-Control", "no-cache")
 
 	//Get the response bytes from the url
-	client := &http.Client{}
+	tr := &http.Transport{
+		TLSClientConfig: &tls.Config{InsecureSkipVerify: e.InsecureTLS},
+	}
+
+	client := &http.Client{
+		Transport: tr,
+	}
+
 	response, err := client.Do(req)
 	if err != nil {
 		return err
@@ -124,7 +128,7 @@ func (e *epgDownloader) downloadFile(dayPlus int, tempDir string) error {
 	return nil
 }
 
-func (e *epgDownloader) removeDeprecated() error {
+func (e *EPGDownloader) removeDeprecated() error {
 	matches, err := filepath.Glob(filepath.Join(FolderEPGData, "*_*_de_qy.xml"))
 	if err != nil {
 		return err
@@ -137,7 +141,7 @@ func (e *epgDownloader) removeDeprecated() error {
 			return err
 		}
 
-		dateToday, err := e.timeToday.GetInt()
+		dateToday, err := e.TimeToday.GetInt()
 		if err != nil {
 			return err
 		}
